@@ -4,16 +4,16 @@ USE DB;
 
 DROP TABLE IF EXISTS Posts;
 CREATE TABLE IF NOT EXISTS Posts (
-	userId INT NOT NULL,
+    userId INT NOT NULL,
     id INT PRIMARY KEY,
     title TEXT NOT NULL ,
     body TEXT NOT NULL);
     
 DROP TABLE IF EXISTS Comments;
 CREATE TABLE IF NOT EXISTS Comments (
-	postId INT NOT NULL,
+    postId INT NOT NULL,
     id INT PRIMARY KEY,
     name TEXT NOT NULL,
-	email TEXT NOT NULL,
+    email TEXT NOT NULL,
     body TEXT NOT NULL,
     FOREIGN KEY (postId) REFERENCES Posts(id))
