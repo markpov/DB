@@ -12,14 +12,11 @@ $db_server = "localhost";
 $db_user="root";
 $db_password = "";
 $db_name = "DB";
-
 $con = mysqli_connect($db_server, $db_user, $db_password, $db_name);
 
 if (mysqli_connect_errno()){
     die("Ошибка: ". $con->connect_error);
 }
-
-
 
 foreach ($arryPostsObj as $item)
 {
@@ -41,5 +38,3 @@ foreach ($arryCommentsObj as $item)
     echo "Загружено $postcount записей и $comcount комментариев";
     $con -> close();
     ?>
-
-
