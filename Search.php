@@ -33,7 +33,6 @@
             if(strlen($query)>=3){
                 $sql = "SELECT p.title, c.body FROM Posts p INNER JOIN comments c ON c.postId = p.id WHERE c.body LIKE ?";
                 $stmt=$con->prepare($sql);
-                $stmt=$con->prepare($sql);
                 $query ="%" . $query . "%";
                 $stmt -> bind_param('s', $query);
                 $stmt -> execute();
